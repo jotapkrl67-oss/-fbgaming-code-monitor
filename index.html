@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monitor de códigos de autenticação em tempo real">
+    <meta name="theme-color" content="#667eea">
+    <title>FBGaming Code Monitor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <span class="logo">📧</span>
+            <h1>FBGaming Code Monitor</h1>
+            <p class="subtitle">Monitore seus códigos em tempo real</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error" id="error"></div>
+
+        <!-- Login Form -->
+        <div id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="seu@email.com" 
+                    value="fbgaminggmax@tiffincrane.com"
+                    autocomplete="email"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="sua senha" 
+                    value="FBGAMINGGMAX"
+                    autocomplete="current-password"
+                >
+            </div>
+
+            <button class="btn-primary" id="loginBtn">Conectar</button>
+        </div>
+
+        <!-- Codes Display -->
+        <div class="codes-container" id="codesContainer">
+            <!-- User Info -->
+            <div class="user-info">
+                <p>Conectado como</p>
+                <div class="user-email" id="userEmail">--</div>
+            </div>
+
+            <!-- Codes List -->
+            <div id="codesList" class="codes-list"></div>
+
+            <!-- Status -->
+            <div class="status">
+                <p>Última atualização: <span class="status-value" id="lastUpdate">--:--:--</span></p>
+                <p>Códigos ativos: <span class="status-value" id="codeCount">0</span></p>
+                <p style="font-size: 11px; margin-top: 10px; color: #999;">Atualização automática a cada 10 segundos</p>
+            </div>
+
+            <!-- Logout Button -->
+            <button class="btn-primary btn-logout" id="logoutBtn">Desconectar</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
+
